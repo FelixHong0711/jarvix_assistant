@@ -1,0 +1,44 @@
+.tutorial-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20000;
+  backdrop-filter: blur(4px);
+}
+
+.tutorial-modal {
+  width: 520px;
+  max-width: 90vw;
+  background: linear-gradient(to bottom, #2d2d2d, #262626);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.45);
+  padding: 20px 20px 16px;
+  color: #e8e8e8;
+}
+
+.tutorial-modal h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.tutorial-steps {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.6;
+}
+
+.tutorial-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.tutorial-actions button {
+  padding: 7px 14px;
+}
+
+
