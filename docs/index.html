@@ -126,7 +126,13 @@
         <a id="downloadWin" class="btn" href="#" download onclick="onWindowsDownload()">Download for Windows</a>
         <a class="btn secondary" href="https://github.com/" target="_blank" rel="noreferrer">View Source</a>
       </div>
-      <div class="note">First run on macOS: right‑click → Open → Open (unsigned build). Add your OpenAI API key in Settings.</div>
+      <div class="note">
+        macOS unsigned install: after dragging to Applications, run this in Terminal:
+        <code style="display:inline-block;padding:2px 6px;background:#0f172a;border-radius:6px;border:1px solid rgba(148,163,184,.2);color:#cbd5e1;">
+          sudo xattr -rd com.apple.quarantine "/Applications/JARVIX Meeting Assistant.app"
+        </code>
+        Then launch the app and add your OpenAI API key in Settings.
+      </div>
     </section>
     <aside class="media">
       <div class="logo" aria-label="JARVIX Logo">
