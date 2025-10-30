@@ -39,7 +39,9 @@ jobs:
       - name: Build DMG (unsigned)
         env:
           CSC_IDENTITY_AUTO: 'false'
-        run: npm run dist:mac
+        run: |
+          npm run build
+          npx electron-builder --mac dmg --publish=never
       - name: Upload DMG to Release
         uses: actions/upload-release-asset@v1
         env:
@@ -61,7 +63,9 @@ jobs:
           node-version: '20'
       - run: npm ci
       - name: Build NSIS
-        run: npm run dist:win
+        run: |
+          npm run build
+          npx electron-builder --win nsis --publish=never
       - name: Upload EXE to Release
         uses: actions/upload-release-asset@v1
         env:
